@@ -17,6 +17,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//STRING
 Route::get('coba', function(){
     return "Halooo";
+});
+
+//array
+Route::get('coba1', function(){
+    return ['Novia', 'Dhya', 'Camila'];
+});
+
+//object json
+Route::get('coba2', function(){
+    return [
+        'Nama' => 'Novia',
+        'Kelas' => 'XII RPL 5',
+        'NIS' => 3103120169
+    ];
+});
+
+//object json
+Route::get('coba3', function(){
+    return response()->json(
+        [
+            'Nama' => 'Novia',
+            'Kelas' => 'XII RPL 5',
+            'NIS' => 3103120169
+        ],201
+    );
 });
